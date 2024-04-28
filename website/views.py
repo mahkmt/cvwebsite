@@ -1,16 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def http_test(request):
-    return HttpResponse("*** HI ***")
 
 def index_view(request):
-    return HttpResponse("This is homepage of my site.")
+    return render(request, "website/index.html")
+
 
 def about_view(request):
-    return HttpResponse("This is about us...")
+    return render(request, "website/about-us.html")
+
 
 def contact_view(request):
-    return HttpResponse("This is contact page.")
+    return render(request, "website/contact.html")
 
 # Create your views here.
